@@ -23,14 +23,14 @@ Another caveat is that some individuals are entered into the database more than 
 
 ##How to this program
 To run this program, please run these scripts in the following order: 
-*_fetch_data.py_ Running this script will download a large files from the Data.gov website and store them in tempdata/
-*_wrangle_data.py_ Running this script will trim this large file into wrangle_Biz.csv
-*_fetch_gender_data.py_ Running this script will download all of the baby names data from the Social Security Administration and store it to tempdata/names.zip
-*_wrangle_gender_data.py_ Running this script will reshape the babynames files from 1950 to 2014 to optimize for use in a gender-detecting program, and store it as wrangledbabynames.csv. This script will also convert the wrangled baby nanmes csv into a json format, stored as wrangledbabynames.json. 
-*_classify.py_ Running this script creates a new data file with gender classification to the Chicago Business Owners data, stored to tempdata/classified_Biz.csv. It also establishes that the name being run through our gender dectector function is a viable name (ie. not a first initial or a first and middle name). 
-*_analyze.py_ Running this function will open and read the tempdata/classified_Biz.csv and apply some analyses. 
+* _fetch_data.py_ Running this script will download a large files from the Data.gov website and store them in tempdata/
+* _wrangle_data.py_ Running this script will trim this large file into wrangle_Biz.csv
+* _fetch_gender_data.py_ Running this script will download all of the baby names data from the Social Security Administration and store it to tempdata/names.zip
+* _wrangle_gender_data.py_ Running this script will reshape the babynames files from 1950 to 2014 to optimize for use in a gender-detecting program, and store it as wrangledbabynames.csv. This script will also convert the wrangled baby nanmes csv into a json format, stored as wrangledbabynames.json. 
+* _classify.py_ Running this script creates a new data file with gender classification to the Chicago Business Owners data, stored to tempdata/classified_Biz.csv. It also establishes that the name being run through our gender dectector function is a viable name (ie. not a first initial or a first and middle name). 
+* _analyze.py_ Running this function will open and read the tempdata/classified_Biz.csv and apply some analyses. 
 *Ancillary files*
-*_gender.py_ This script loads the wrangledbabynames.json file and applies the gender detector function, returning a dictionary that identifies the name in the tempdata/wrangledbabynames.json and supplies each name with gender and ratio. Code not needed to run, but will be called upon by classify.py. 
+* _gender.py_ This script loads the wrangledbabynames.json file and applies the gender detector function, returning a dictionary that identifies the name in the tempdata/wrangledbabynames.json and supplies each name with gender and ratio. Code not needed to run, but will be called upon by classify.py. 
 
 ##Analysis
 The total demographic breakout of business owners in the city of Chicago reveals that 62% are male and 38% female. While these numbers are similar to the 2007 statistics of 58% male and 41% female, it is a smaller gender gap. At the national level, a [study](http://www.forbes.com/sites/forbesasia/2014/03/06/number-of-women-in-senior-management-stagnant-at-24/#fde9d424d60d) found that senior business roles held by women has remained stagnant from 2007-2014. The 3% increase in the city of Chicago is a hopeful sign. Indeed, Illinois is the third most equal state for women according to personal finance website [WalletHub](http://progressillinois.com/quick-hits/content/2015/08/24/whats-status-womens-equality-illinois). 
