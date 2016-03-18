@@ -29,7 +29,8 @@ To run this program, please run these scripts in the following order:
 * _wrangle_gender_data.py_ Running this script will reshape the babynames files from 1950 to 2014 to optimize for use in a gender-detecting program, and store it as wrangledbabynames.csv. This script will also convert the wrangled baby nanmes csv into a json format, stored as wrangledbabynames.json. 
 * _classify.py_ Running this script creates a new data file with gender classification to the Chicago Business Owners data, stored to tempdata/classified_Biz.csv. It also establishes that the name being run through our gender dectector function is a viable name (ie. not a first initial or a first and middle name). 
 * _analyze.py_ Running this function will open and read the tempdata/classified_Biz.csv and apply some analyses. 
-*Ancillary files*
+
+**Ancillary files**
 * _gender.py_ This script loads the wrangledbabynames.json file and applies the gender detector function, returning a dictionary that identifies the name in the tempdata/wrangledbabynames.json and supplies each name with gender and ratio. Code not needed to run, but will be called upon by classify.py. 
 
 ##Analysis
